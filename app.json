@@ -25,6 +25,10 @@
       "description": "Slack channels to post the announcements, comma separated",
       "value": ""
     },
+    "SLACK_GROUPS": {
+      "description": "Slack private groups to post the announcements, comma separated",
+      "value": ""
+    },
     "CHECK_INTERVAL": {
       "description": "Time interval to check for new pull requests, in milliseconds",
       "value": "3600000"
