@@ -13,7 +13,6 @@ const envMock = {
   GH_REPOS: 'foo'
 }
 
-const debounceMock = sinon.stub()
 const pullhubMock = sinon.stub().resolves([])
 
 const server = proxyquire('../lib/server', {
@@ -44,13 +43,4 @@ test('it calls pullhub on start', (t) => {
 
   server()
   t.ok(pullhubMock.calledWith(['foo']))
-})
-
-test('it calls lodash debounce on start', (t) => {
-  t.plan(1)
-
-  process.env = envMock
-
-  server()
-  t.ok(debounceMock.called)
 })
