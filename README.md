@@ -26,4 +26,4 @@ This will start the server locally until `Ctrl-C` is pressed.
 
 ## Deploy
 
-Soon...
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
