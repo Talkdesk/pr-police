@@ -1,0 +1,32 @@
+{
+  "name": "pr-police",
+  "version": "1.0.0",
+  "description": "Slackbot that warns about open pull requests with given labels",
+  "main": "index.js",
+  "scripts": {
+    "pretest": "standard",
+    "test": "tape test/*.js | faucet",
+    "start": "node index.js"
+  },
+  "keywords": [
+    "slackbot",
+    "pull",
+    "request",
+    "github",
+    "labels"
+  ],
+  "author": "rogeriopvl",
+  "license": "MIT",
+  "dependencies": {
+    "lodash.debounce": "^4.0.8",
+    "pullhub": "^1.0.1",
+    "slackbots": "^1.0.2"
+  },
+  "devDependencies": {
+    "faucet": "^0.0.1",
+    "proxyquire": "^1.7.11",
+    "sinon": "^2.1.0",
+    "standard": "^10.0.2",
+    "tape": "^4.6.3"
+  }
+}
