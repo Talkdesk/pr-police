@@ -17,8 +17,7 @@ const pullhubMock = sinon.stub().resolves([])
 
 const server = proxyquire('../lib/server', {
   slackbots: SlackbotsMock,
-  pullhub: pullhubMock,
-  'lodash.debounce': debounceMock
+  pullhub: pullhubMock
 })
 
 test('it throws error on missing required env var', (t) => {
