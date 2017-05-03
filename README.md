@@ -24,6 +24,8 @@ Git clone this repository then:
 
 This will start the server locally until `Ctrl-C` is pressed.
 
+**Note:** You will need to pass all the required env vars.
+
 ## Deploy
 
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
