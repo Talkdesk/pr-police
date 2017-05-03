@@ -1,4 +1,4 @@
-# PR Police
+# PR Police [![Build Status](https://travis-ci.org/Talkdesk/pr-police.svg?branch=master)](https://travis-ci.org/Talkdesk/pr-police)
 
 ## About
 
