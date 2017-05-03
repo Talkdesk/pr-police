@@ -2,7 +2,6 @@
   "name": "pr-police",
   "description": "A slack bot that reminds you of open PRs for review in your chosen repos",
   "repository": "https://github.com/Talkdesk/pr-police",
-  "logo": "",
   "keywords": ["pull", "request", "police", "github", "node", "slackbot", "slack"],
   "env": {
     "GH_TOKEN": {
