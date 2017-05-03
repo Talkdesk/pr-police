@@ -10,10 +10,12 @@ const envMock = {
   SLACK_TOKEN: 'foo',
   GH_TOKEN: 'foo',
   SLACK_CHANNELS: 'foo',
-  GH_REPOS: 'foo'
+  GH_REPOS: 'foo',
+  CHECK_INTERVAL: '1'
 }
 
 const pullhubMock = sinon.stub().resolves([])
+const clock = sinon.useFakeTimers()
 
 const server = proxyquire('../lib/server', {
   slackbots: SlackbotsMock,
@@ -41,5 +43,6 @@ test('it calls pullhub on start', (t) => {
   process.env = envMock
 
   server()
-  t.ok(pullhubMock.calledWith(['foo']))
+  clock.tick(envMock.CHECK_INTERVAL)
+  t.ok(pullhubMock.called)
 })
