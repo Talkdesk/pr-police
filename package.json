@@ -15,9 +15,13 @@
     "github",
     "labels"
   ],
+  "bin": {
+    "pr-police": "./bin/pr-police"
+  },
   "author": "rogeriopvl",
   "license": "MIT",
   "dependencies": {
+    "minimist": "^1.2.0",
     "pullhub": "^1.0.1",
     "slackbots": "^1.0.2"
   },
