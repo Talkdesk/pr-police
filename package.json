@@ -1,6 +1,6 @@
 {
   "name": "pr-police",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "Slackbot that warns about open pull requests with given labels",
   "main": "index.js",
   "scripts": {
