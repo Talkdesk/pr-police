@@ -7,7 +7,8 @@
     "pretest": "standard",
     "test": "tape test/*.js | faucet",
     "start": "node index.js",
-    "commitmsg": "conventional-changelog-lint -e"
+    "commitmsg": "conventional-changelog-lint -e",
+    "version": "standard-changelog"
   },
   "keywords": [
     "slackbot",
@@ -33,6 +34,7 @@
     "proxyquire": "^1.7.11",
     "sinon": "^2.1.0",
     "standard": "^10.0.2",
+    "standard-changelog": "^1.0.1",
     "tape": "^4.6.3"
   }
 }
