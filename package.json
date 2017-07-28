@@ -23,6 +23,7 @@
   "author": "rogeriopvl",
   "license": "MIT",
   "dependencies": {
+    "milligram": "^1.3.0",
     "minimist": "^1.2.0",
     "pullhub": "^1.0.1",
     "slackbots": "^1.0.2"
