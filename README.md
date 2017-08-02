@@ -67,6 +67,9 @@ Time interval for announcing the pull-requests on slack. In milliseconds. Defaul
 ##### `SLACK_BOT_NAME`
 The name of your Pr. Police bot on slack.
 
+##### `SLACK_BOT_ICON`
+URL of the icon for the slack bot when sending messages.
+
 ## Credits
 
 Pr. Police was developed by [Rogério Vicente](https://github.com/rogeriopvl) during one of Talkdesk's internal hackathons.
