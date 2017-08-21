@@ -27,7 +27,7 @@ You'll still need to fill in all the environment variables. For more info on thi
 
 Git clone this repository then:
 
-    yarn install
+    npm install
 
 #### Run
 
