@@ -41,6 +41,15 @@ This will start the server locally until `Ctrl-C` is pressed.
 
 Pr. Police has the following environment variables available:
 
+##### `CHECK_INTERVAL`
+Time interval for announcing the pull-requests on slack. In milliseconds. Default: `3600000`.
+
+##### `DEBUG`
+Debug flag used to enable more verbose logging. Default: `false`
+
+##### `DAYS_TO_RUN`
+Which days of the week to run on. Default: `Monday,Tuesday,Wednedsay,Thursday,Friday`
+
 ##### `GH_TOKEN`
 The github account token to access the repos. Required.
 
@@ -62,9 +71,6 @@ Example: `notifications`
 
 ##### `SLACK_GROUPS`
 The list of private group names on your team where Pr. Police will post the announcements. Multiple channels are comma separated. Either `SLACK_CHANNELS` or `SLACK_GROUPS` is required.
-
-##### `CHECK_INTERVAL`
-Time interval for announcing the pull-requests on slack. In milliseconds. Default: `3600000`.
 
 ##### `SLACK_BOT_NAME`
 The name of your Pr. Police bot on slack. Optional.

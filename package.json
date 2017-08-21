@@ -25,7 +25,8 @@
   "dependencies": {
     "minimist": "^1.2.0",
     "pullhub": "^1.1.0",
-    "slackbots": "^1.2.0"
+    "slackbots": "^1.2.0",
+    "moment": "^2.18.1"
   },
   "devDependencies": {
     "@commitlint/cli": "^7.5.2",
