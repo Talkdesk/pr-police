@@ -4,6 +4,12 @@
   "repository": "https://github.com/Talkdesk/pr-police",
   "keywords": ["pull", "request", "police", "github", "node", "slackbot", "slack"],
   "logo": "https://raw.githubusercontent.com/Talkdesk/pr-police/master/images/badge-white-small.png",
+  "formation": {
+    "worker": {
+      "quantity": 1,
+      "size": "free"
+    }
+  },
   "env": {
     "GH_TOKEN": {
       "description": "Github account token to access needed repositories",
