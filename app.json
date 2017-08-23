@@ -46,11 +46,7 @@
       "value": "",
       "required": false
     },
-    "CHECK_INTERVAL": {
-      "description": "Time interval to check for new pull requests, in milliseconds",
-      "value": "3600000",
-      "required": false
-    },
+
     "SLACK_BOT_NAME": {
       "description": "The name of the bot on your slack organization",
       "value": "",
@@ -59,6 +55,11 @@
     "SLACK_BOT_ICON": {
       "description": "URL of the bot icon to show when posting messages",
       "value": "",
+      "required": false
+    },
+    "TIMES_TO_RUN": {
+      "description": "What times of day to run (24-hour format), comma-separated",
+      "value": "0900",
       "required": false
     }
   }
