@@ -13,7 +13,7 @@
   "env": {
     "DAYS_TO_RUN": {
       "description": "Which days of the week to run on (locale-specific), comma-separated",
-      "value": "Monday,Tuesday,Wednedsay,Thursday,Friday"
+      "value": "Monday,Tuesday,Wednesday,Thursday,Friday"
     },
     "DEBUG": {
       "description": "Debug flag to enable more verbose logging",

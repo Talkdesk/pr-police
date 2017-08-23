@@ -48,7 +48,7 @@ Time interval for announcing the pull-requests on slack. In milliseconds. Defaul
 Debug flag used to enable more verbose logging. Default: `false`
 
 ##### `DAYS_TO_RUN`
-Which days of the week to run on. Default: `Monday,Tuesday,Wednedsay,Thursday,Friday`
+Which days of the week to run on. Default: `Monday,Tuesday,Wednesday,Thursday,Friday`
 
 ##### `GH_TOKEN`
 The github account token to access the repos. Required.
