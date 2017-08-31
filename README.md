@@ -56,10 +56,17 @@ The slack token for the bot to access your slack team. Required.
 #### `GH_REPOS`
 The list of repositories to watch. The format is `user/repo` and comma separated. Required.
 
-Example: `rogeriopvl/gulp-ejs, rogeriopvl/pullhub, talkdesk/pr-police`
+Example: `rogeriopvl/gulp-ejs,rogeriopvl/pullhub,talkdesk/pr-police`
+
+##### `GH_EXCLUDE_LABELS`
+The list of labels that will cause a pull-request to be excluded. So imagine, your team uses the label `in-progress` for pull-requests not yet requiring review, you'll have to fill in: `in-progress`. Supercedes `GH_LABELS`. Multiple labels are comma separated.
+
+Example: `do-not-merge,in-progress,needs-work`
 
 ##### `GH_LABELS`
 The list of labels to filter pull-requests. So imagine, your team uses the label `needs review` for pull-requests waiting for review, you'll have to fill in: `needs review`. Multiple labels are comma separated. Optional.
+
+NOTE: Omitting both `GH_EXCLUDE_LABELS` and `GH_LABELS` will result in _all_ open pull-requests being reported for the specified `GH_REPOS`.
 
 ##### `SLACK_CHANNELS`
 The list of channel names on your team where Pr. Police will post the announcements. Multiple channels are comma separated. Either `SLACK_CHANNELS` or `SLACK_GROUPS` is required.
