@@ -31,6 +31,11 @@
       "description": "Repositories to watch in user/repo format, comma separated",
       "value": "johndoe/somerepo,johndoe/anotherrepo"
     },
+    "GH_EXCLUDE_LABELS": {
+      "description": "Repository labels that will exclude pull requests, comma-separated. Supercedes GH_LABELS",
+      "value": "",
+      "required": false
+    },
     "GH_LABELS": {
       "description": "Repository labels to filter pull requests, comma separated",
       "value": "",
