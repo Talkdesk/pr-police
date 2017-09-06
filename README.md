@@ -53,7 +53,7 @@ The github account token to access the repos. Required.
 ##### `SLACK_TOKEN`
 The slack token for the bot to access your slack team. Required.
 
-#### `GH_REPOS`
+##### `GH_REPOS`
 The list of repositories to watch. The format is `user/repo` and comma separated. Required.
 
 Example: `rogeriopvl/gulp-ejs,rogeriopvl/pullhub,talkdesk/pr-police`
@@ -84,6 +84,13 @@ URL of the icon for the slack bot when sending messages.
 
 ##### `TIMES_TO_RUN`
 What times of day to run (24-hour format, leading zeroes are not necessary). Multiple times are comma-separated. Default: `0900`.
+
+##### `TZ`
+The timezone the server should use. Heroku default is UTC. Uses tz database timezone format. Example: `America/Los_Angeles`.
+
+## Heroku configuration
+
+If heroku attempts to start a web process instead of a worker, you may need to run: `heroku ps:scale web=0 worker=1 -a {HEROKU_APP_NAME}`
 
 ## Credits
 
