@@ -66,6 +66,11 @@
       "description": "What times of day to run (24-hour format), comma-separated",
       "value": "0900",
       "required": false
+    },
+    "TZ": {
+      "description": "The timezone the server should use. Heroku default is UTC. Uses tz database timezone format. Example: 'America/Los_Angeles'",
+      "value": "",
+      "required": false
     }
   }
 }

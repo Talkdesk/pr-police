@@ -37,14 +37,3 @@ test('it calls slackbots onStart handler', (t) => {
   clock.tick(envMock.CHECK_INTERVAL)
   t.ok(SlackbotsMock.prototype.on.calledWith('start'))
 })
-
-// DISABLED, SINCE CHECKING IS NOW GATED BY DAYS AND TIMES
-// test('it calls pullhub on start', (t) => {
-//   t.plan(1)
-
-//   process.env = envMock
-
-//   server()
-//   clock.tick(envMock.CHECK_INTERVAL)
-//   t.ok(pullhubMock.called)
-// })
