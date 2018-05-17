@@ -42,33 +42,35 @@ This will start the server locally until `Ctrl-C` is pressed.
 Pr. Police has the following environment variables available:
 
 ##### `GH_TOKEN`
-The github account token to access the repos
+The github account token to access the repos. Required.
 
 ##### `SLACK_TOKEN`
-The slack token for the bot to access your slack team
+The slack token for the bot to access your slack team. Required.
 
 #### `GH_REPOS`
-The list of repositories to watch. The format is `user/repo` and comma separated.
+The list of repositories to watch. The format is `user/repo` and comma separated. Required.
 
 Example: `rogeriopvl/gulp-ejs, rogeriopvl/pullhub, talkdesk/pr-police`
 
 ##### `GH_LABELS`
-The list of labels to filter pull-requests. So imagine, your team uses the label `needs review` for pull-requests waiting for review, you'll have to fill in: `needs review`. Multiple labels are comma separated.
+The list of labels to filter pull-requests. So imagine, your team uses the label `needs review` for pull-requests waiting for review, you'll have to fill in: `needs review`. Multiple labels are comma separated. Optional.
 
 ##### `SLACK_CHANNELS`
-The list of channels on your team where Pr. Police will post the announcements. Multiple channels are comma separated.
+The list of channel names on your team where Pr. Police will post the announcements. Multiple channels are comma separated. Either `SLACK_CHANNELS` or `SLACK_GROUPS` is required.
+
+Example: `notifications`
 
 ##### `SLACK_GROUPS`
-The list of private groups on your team where Pr. Police will post the announcements. Multiple channels are comma separated.
+The list of private group names on your team where Pr. Police will post the announcements. Multiple channels are comma separated. Either `SLACK_CHANNELS` or `SLACK_GROUPS` is required.
 
 ##### `CHECK_INTERVAL`
 Time interval for announcing the pull-requests on slack. In milliseconds. Default: `3600000`.
 
 ##### `SLACK_BOT_NAME`
-The name of your Pr. Police bot on slack.
+The name of your Pr. Police bot on slack. Optional.
 
 ##### `SLACK_BOT_ICON`
-URL of the icon for the slack bot when sending messages.
+URL of the icon for the slack bot when sending messages. Optional.
 
 ## Credits
 
