@@ -2,13 +2,13 @@ const test = require('tape')
 const proxyquire = require('proxyquire')
 const sinon = require('sinon')
 
-test('when passing no arguments calls server function', (t) => {
-  t.plan(1)
-
+test('when passing no arguments calls server function', (assert) => {
   const serverStub = sinon.stub().callsFake(() => null)
   const cli = proxyquire('../lib/cli', { './server': serverStub })
 
-  cli({ _: [] })
+  const exitCode = cli({ _: [] })
 
-  t.ok(serverStub.called)
+  assert.ok(serverStub.calledWith({config: 'value'}))
+  assert.equals(exitCode, 0)
+  assert.end()
 })

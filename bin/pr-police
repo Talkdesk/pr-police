@@ -2,4 +2,4 @@
 
 const minimist = require('minimist')
 
-require('../lib/cli')(minimist(process.argv.slice(2)))
+process.exit(require('../lib/cli')(minimist(process.argv.slice(2))))
