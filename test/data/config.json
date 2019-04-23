@@ -1,0 +1,54 @@
+[
+  {
+    "repository": {
+      "names": [
+        "talkdesk/repo1",
+        "talkdesk/repo2"
+      ],
+      "labels": [
+        "label1",
+        "label2"
+      ]
+    },
+    "slack": {
+      "channels": [
+        "channel1",
+        "channel2"
+      ],
+      "groups": [
+        "group1",
+        "group2"
+      ],
+      "bot": {
+        "name": "bot_name",
+        "icon": "https://images.talkdesk.com/bot.png"
+      }
+    }
+  },
+  {
+    "repository": {
+      "names": [
+        "talkdesk/repo3",
+        "talkdesk/repo4"
+      ],
+      "labels": [
+        "label3",
+        "label4"
+      ]
+    },
+    "slack": {
+      "channels": [
+        "channel3",
+        "channel4"
+      ],
+      "groups": [
+        "group3",
+        "group4"
+      ],
+      "bot": {
+        "name": "other_bot_name",
+        "icon": "https://images.talkdesk.com/other_bot.png"
+      }
+    }
+  }
+]

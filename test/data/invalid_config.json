@@ -1,0 +1,16 @@
+[
+  {
+    "repository": {
+      "labels": [
+        "label1",
+        "label2"
+      ]
+    },
+    "slack": {
+      "bot": {
+        "name": "bot_name",
+        "icon": "https://images.talkdesk.com/bot.png"
+      }
+    }
+  }
+]
