@@ -39,36 +39,81 @@ This will start the server locally until `Ctrl-C` is pressed.
 
 ## Configuration
 
-Pr. Police has the following environment variables available:
+The application can be configured completely through environment variables or through a configuration file.
 
-##### `GH_TOKEN`
-The github account token to access the repos
+When using only environment variables, it's only possible to map a set of repositories -> set of Slack channels/groups. If you're looking for a way to have a single instance of the application triggering multiple notifications with different rules (i.e. an organization with multiple teams, each with their own rules of repositories -> notifications), you must use the configuration file.
 
-##### `SLACK_TOKEN`
-The slack token for the bot to access your slack team
+### Environment Variables
 
-#### `GH_REPOS`
-The list of repositories to watch. The format is `user/repo` and comma separated.
+Environment Variable | Description | Required | Example 
+-------------------- | ----------- | -------- | -------
+`GH_TOKEN`           | The [Github token](https://help.github.com/en/articles/creating-a-personal-access-token-for-the-command-line) used to retrieve the PR's information from the repositories. | yes | N/A
+`SLACK_TOKEN`        | The [Slack bot user token](https://get.slack.help/hc/en-us/articles/215770388-Create-and-regenerate-API-tokens#-bot-user-tokens) used to publish messages on Slack | yes | N/A
+`GH_REPOS`           | A comma separated value of repositories to wach | yes, unless a configuration file is used | `rogeriopvl/gulp-ejs,rogeriopvl/pullhub,talkdesk/pr-police`
+`GH_LABELS`          | The list of labels to filter pull-requests. If provided only PRs with these labels will trigger notifications | no | `needs review, pr police`
+`SLACK_CHANNELS`     | The list of slack channels to where the notifications will be sent | unless a configuration file is used, either a channel or group must be set | `dev-alerts,pr-alerts`
+`SLACK_GROUPS`       | The list of slack private groups to where the notifications will be sent | unless a configuration file is used, either a channel or group must be set | `dev-secret-alerts`
+`CHECK_INTERVAL`     | The interval in milliseconds, between each run of the bot (each run triggers notifications) | no, defaults to 1h | `86400000`
+`SLACK_BOT_NAME`     | The user name used to publish messages on Slack | no | `My Team's bot`
+`SLACK_BOT_ICON`     | The icon to be used when publishing messages on Slack | no | `https://i1.sndcdn.com/avatars-000125818478-ph4tjj-t500x500.jpg`
 
-Example: `rogeriopvl/gulp-ejs, rogeriopvl/pullhub, talkdesk/pr-police`
+### Configuration file
 
-##### `GH_LABELS`
-The list of labels to filter pull-requests. So imagine, your team uses the label `needs review` for pull-requests waiting for review, you'll have to fill in: `needs review`. Multiple labels are comma separated.
+If you need a more complex project configuration format, with multiple repositories -> notification rules, you can place a `projects.json` file in the root directory of the project.
 
-##### `SLACK_CHANNELS`
-The list of channels on your team where Pr. Police will post the announcements. Multiple channels are comma separated.
+The format of the file is as follows:
 
-##### `SLACK_GROUPS`
-The list of private groups on your team where Pr. Police will post the announcements. Multiple channels are comma separated.
+```json
+[
+  {
+    "repository": {
+      "names": [
+        "Talkdesk/repository-1",
+        "Talkdesk/repository-2"
+      ]
+    },
+    "slack": {
+      "channels": [
+        "team-1-channel",
+        "general"
+      ],
+      "groups": [
+        "secret-group"
+      ],
+      "bot": {
+        "name": "Chuck Norris",
+        "icon": "https://i1.sndcdn.com/avatars-000125818478-ph4tjj-t500x500.jpg"
+      }
+    }
+  },
+  {
+    "repository": {
+      "names": [
+        "Talkdesk/repository-3"
+      ],
+      "labels": [
+        "needs review"
+      ]
+    },
+    "slack": {
+      "channels": [
+        "team-2-channel"
+      ],
+      "bot": {
+        "name": "Harry Potter",
+        "icon": "https://lh3.googleusercontent.com/0duXs46FK54NZtOAnXbqv5xcpz0NCf7JE34ITfYZhGS2eiPWd11l9FzaJNEnny1K1Fatz2oE2HENKahpPQ"
+      }
+    }
+  }
+]
+```
 
-##### `CHECK_INTERVAL`
-Time interval for announcing the pull-requests on slack. In milliseconds. Default: `3600000`.
+With the configuration above:
 
-##### `SLACK_BOT_NAME`
-The name of your Pr. Police bot on slack.
+1. Any PR on `Talkdesk/repository-1` and `Talkdesk/repository-2` will trigger a notification to the channels `team-channel-1`, `general` and to the group `secret-group` (using a Chuck Norris persona)
 
-##### `SLACK_BOT_ICON`
-URL of the icon for the slack bot when sending messages.
+2. Any PR with a label `needs review` on the repository `Talkdesk/repository-3` will trigger a notification to the channel `team-2-channel` (using a Harry Potter persona)
+
 
 ## Credits
 
