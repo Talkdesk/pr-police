@@ -1,5 +1,0 @@
-#!/usr/bin/env node
-
-const minimist = require('minimist')
-
-require('../lib/cli')(minimist(process.argv.slice(2)))
