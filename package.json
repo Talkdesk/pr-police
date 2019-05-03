@@ -1,41 +1,38 @@
 {
   "name": "pr-police",
-  "version": "1.2.0",
+  "version": "2.0.0",
   "description": "Slackbot that warns about open pull requests with given labels",
   "main": "index.js",
-  "scripts": {
-    "pretest": "standard",
-    "test": "tape test/*.js | faucet",
-    "start": "node index.js",
-    "commitmsg": "commitlint -e",
-    "version": "standard-changelog"
-  },
-  "keywords": [
-    "slackbot",
-    "pull",
-    "request",
-    "github",
-    "labels"
-  ],
-  "bin": {
-    "pr-police": "./bin/pr-police"
-  },
+  "repository": "https://github.com/Talkdesk/pr-police.git",
   "author": "rogeriopvl",
   "license": "MIT",
-  "dependencies": {
-    "minimist": "^1.2.0",
-    "pullhub": "^1.1.0",
-    "slackbots": "^1.2.0"
+  "private": false,
+  "engines": {
+    "node": ">=10 <13"
   },
   "devDependencies": {
-    "@commitlint/cli": "^7.5.2",
-    "@commitlint/config-conventional": "^7.5.0",
-    "faucet": "^0.0.1",
-    "husky": "^0.13.3",
-    "proxyquire": "^1.7.11",
-    "sinon": "^2.1.0",
-    "standard": "^10.0.3",
-    "standard-changelog": "^1.0.19",
-    "tape": "^4.10.1"
+    "@types/jest": "^24.0.12",
+    "@types/node": "^11.13.2",
+    "jest": "^24.7.1",
+    "prettier": "^1.17.0",
+    "rimraf": "^2.6.3",
+    "ts-jest": "^24.0.2",
+    "tslint": "^5.16.0",
+    "tslint-config-prettier": "^1.18.0",
+    "tslint-microsoft-contrib": "^6.1.1",
+    "tsutils": "^3.10.0",
+    "typescript": "^3.3.4"
+  },
+  "scripts": {
+    "clean": "rimraf coverage build tmp",
+    "build": "tsc -p tsconfig.release.json",
+    "build:watch": "tsc -w -p tsconfig.release.json",
+    "lint": "tslint -t stylish --project \"tsconfig.json\"",
+    "pretest": "yarn lint",
+    "test": "jest --coverage",
+    "test:watch": "jest --watch"
+  },
+  "dependencies": {
+    "tslib": "^1.9.3"
   }
 }
