@@ -26,12 +26,13 @@
   },
   "scripts": {
     "clean": "rimraf coverage build tmp",
+    "prebuild": "yarn clean && yarn test",
     "build": "tsc -p tsconfig.release.json",
-    "build:watch": "tsc -w -p tsconfig.release.json",
     "lint": "tslint -c tslint.json 'src/**/*.{ts,tsx}' --fix --format verbose",
     "pretest": "yarn lint",
-    "test": "jest --coverage",
-    "test:watch": "jest --watch"
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage"
   },
   "dependencies": {
     "tslib": "^1.9.3"
