@@ -1,19 +1,23 @@
 {
   "extends": [
+    "tslint:recommended",
     "tslint-config-prettier"
   ],
+  "rulesDirectory": [
+    "tslint-plugin-prettier"
+  ],
   "rules": {
-    "no-relative-imports": false,
-    "export-name": false,
-    "promise-function-async": false,
-    "no-void-expression": false,
-    "prefer-type-cast": false,
-    "typedef": [
+    "prettier": true,
+    "interface-name": false,
+    "object-literal-sort-keys": false,
+    "no-console": false,
+    "file-name-casing": [
       true,
-      "parameter",
-      "arrow-parameter",
-      "property-declaration",
-      "member-variable-declaration"
+      {
+        ".ts": "camel-case",
+        ".d.ts": "kebab-case",
+        ".*": "camel-case"
+      }
     ]
   }
 }
