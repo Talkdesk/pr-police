@@ -28,7 +28,7 @@
     "clean": "rimraf coverage build tmp",
     "prebuild": "yarn clean && yarn test",
     "build": "tsc -p tsconfig.release.json",
-    "lint": "tslint -c tslint.json 'src/**/*.{ts,tsx}' --fix --format verbose",
+    "lint": "tslint -c tslint.json 'src/**/*.{ts,tsx}' 'tests/**/*.{ts,tsx}' --fix --format verbose",
     "pretest": "yarn lint",
     "test": "jest",
     "test:watch": "jest --watch",
