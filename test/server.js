@@ -34,15 +34,6 @@ test('it calls slackbots onStart handler', (t) => {
   process.env = envMock
 
   server()
-  t.ok(SlackbotsMock.prototype.on.calledWith('start'))
-})
-
-test('it calls pullhub on start', (t) => {
-  t.plan(1)
-
-  process.env = envMock
-
-  server()
   clock.tick(envMock.CHECK_INTERVAL)
-  t.ok(pullhubMock.called)
+  t.ok(SlackbotsMock.prototype.on.calledWith('start'))
 })

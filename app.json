@@ -11,6 +11,14 @@
     }
   },
   "env": {
+    "DAYS_TO_RUN": {
+      "description": "Which days of the week to run on (locale-specific), comma-separated",
+      "value": "Monday,Tuesday,Wednesday,Thursday,Friday"
+    },
+    "DEBUG": {
+      "description": "Debug flag to enable more verbose logging",
+      "value": false
+    },
     "GH_TOKEN": {
       "description": "Github account token to access needed repositories",
       "value": "secret"
@@ -22,6 +30,11 @@
     "GH_REPOS": {
       "description": "Repositories to watch in user/repo format, comma separated",
       "value": "johndoe/somerepo,johndoe/anotherrepo"
+    },
+    "GH_EXCLUDE_LABELS": {
+      "description": "Repository labels that will exclude pull requests, comma-separated. Supercedes GH_LABELS",
+      "value": "",
+      "required": false
     },
     "GH_LABELS": {
       "description": "Repository labels to filter pull requests, comma separated",
@@ -38,11 +51,7 @@
       "value": "",
       "required": false
     },
-    "CHECK_INTERVAL": {
-      "description": "Time interval to check for new pull requests, in milliseconds",
-      "value": "3600000",
-      "required": false
-    },
+
     "SLACK_BOT_NAME": {
       "description": "The name of the bot on your slack organization",
       "value": "",
@@ -50,6 +59,16 @@
     },
     "SLACK_BOT_ICON": {
       "description": "URL of the bot icon to show when posting messages",
+      "value": "",
+      "required": false
+    },
+    "TIMES_TO_RUN": {
+      "description": "What times of day to run (24-hour format), comma-separated",
+      "value": "0900",
+      "required": false
+    },
+    "TZ": {
+      "description": "The timezone the server should use. Heroku default is UTC. Uses tz database timezone format. Example: 'America/Los_Angeles'",
       "value": "",
       "required": false
     }
