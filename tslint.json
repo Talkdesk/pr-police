@@ -11,6 +11,7 @@
     "interface-name": false,
     "object-literal-sort-keys": false,
     "no-console": false,
+    "max-classes-per-file": [false],
     "file-name-casing": [
       true,
       {
