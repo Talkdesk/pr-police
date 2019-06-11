@@ -1,18 +1,5 @@
 import { validate as validateSchema } from 'jsonschema'
-
-enum Weekday {
-  MONDAY = 'mon',
-  TUESDAY = 'tue',
-  WEDNESDAY = 'wed',
-  THURSDAY = 'thu',
-  FRIDAY = 'fri',
-  SATURDAY = 'sat',
-  SUNDAY = 'sun',
-}
-
-class ScheduleConfiguration {
-  constructor(readonly hour: number, readonly minute: number, readonly weekdays: Weekday[]) {}
-}
+import { ScheduleConfiguration } from './scheduleConfiguration'
 
 enum RepositoryHost {
   GITHUB = 'github',
