@@ -1,4 +1,10 @@
-# Pr. Police [![Build Status](https://travis-ci.org/Talkdesk/pr-police.svg?branch=master)](https://travis-ci.org/Talkdesk/pr-police)
+# :warning: Pr. Police is deprecated and no longer supported :warning:
+
+GitHub has incorporated a similar feature and now enables [you](https://docs.github.com/en/github/setting-up-and-managing-your-github-user-account/managing-your-scheduled-reminders), your [team](https://docs.github.com/en/github/setting-up-and-managing-organizations-and-teams/managing-scheduled-reminders-for-your-team) or [organization](https://docs.github.com/en/github/setting-up-and-managing-your-github-user-account/managing-your-scheduled-reminders) to be reminded when pull requests are waiting for review.
+
+--------------------
+
+# Pr. Police
 
 ![Pr. Police logo](https://raw.githubusercontent.com/Talkdesk/pr-police/master/images/logo-blue-small.png)
 
