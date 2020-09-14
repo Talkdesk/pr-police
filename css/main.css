@@ -20,6 +20,15 @@ header img {
   max-height: 340px;
 }
 
+section.notice {
+  background-color: #28CB99;
+  color: #fff;
+  padding: 1em;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  font-size: 3rem;
+}
+
 section.content {
   background-color: #1067dc;
   color: #fff;
